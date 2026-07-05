@@ -1,0 +1,79 @@
+{
+  "vocab_size": 10000,
+  "learned_tokens": 9271,
+  "reserved_tokens": 729,
+  "sample_words": 1500,
+  "allocation": {
+    "en": 2094,
+    "hi": 1656,
+    "te": 2909,
+    "ta": 2528
+  },
+  "approach": "partitioned-waterfill",
+  "ratio_definition": "X = tokens / words on an equal per-language word sample (lower is better; target <= 1.2)",
+  "per_language": {
+    "en": {
+      "name": "English",
+      "words": 1500,
+      "tokens": 1596,
+      "X": 1.064,
+      "X_inverse": 0.9398
+    },
+    "hi": {
+      "name": "Hindi",
+      "words": 1500,
+      "tokens": 1627,
+      "X": 1.0847,
+      "X_inverse": 0.9219
+    },
+    "te": {
+      "name": "Telugu",
+      "words": 1500,
+      "tokens": 1599,
+      "X": 1.066,
+      "X_inverse": 0.9381
+    },
+    "ta": {
+      "name": "Tamil",
+      "words": 1500,
+      "tokens": 1560,
+      "X": 1.04,
+      "X_inverse": 0.9615
+    }
+  },
+  "sorted_ascending": [
+    {
+      "lang": "ta",
+      "name": "Tamil",
+      "X": 1.04
+    },
+    {
+      "lang": "en",
+      "name": "English",
+      "X": 1.064
+    },
+    {
+      "lang": "te",
+      "name": "Telugu",
+      "X": 1.066
+    },
+    {
+      "lang": "hi",
+      "name": "Hindi",
+      "X": 1.0847
+    }
+  ],
+  "X_min": {
+    "lang": "ta",
+    "name": "Tamil",
+    "value": 1.04
+  },
+  "X_max": {
+    "lang": "hi",
+    "name": "Hindi",
+    "value": 1.0847
+  },
+  "spread": 0.0447,
+  "score": 22371.36,
+  "all_under_1_2": true
+}
