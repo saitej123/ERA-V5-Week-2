@@ -1,79 +1,79 @@
 {
   "vocab_size": 10000,
-  "learned_tokens": 9824,
-  "reserved_tokens": 176,
-  "sample_words": 1700,
-  "allocation": {
-    "en": 2215,
-    "hi": 1793,
-    "te": 3096,
-    "ta": 2640
+  "variant": "wiki_faithful_markdown",
+  "weights": {
+    "en": 3,
+    "hi": 4,
+    "te": 4,
+    "mai": 2
   },
-  "approach": "partitioned-waterfill+fine-endgame",
-  "ratio_definition": "X = tokens / words on an equal per-language word sample (lower is better; target <= 1.2)",
+  "ratio_definition": "X = tokens / faithful_units on the full wiki-faithful Markdown page (letter/mark/number run OR one visible punctuation/symbol)",
   "per_language": {
     "en": {
       "name": "English",
-      "words": 1700,
-      "tokens": 1837,
-      "X": 1.0806,
-      "X_inverse": 0.9254
+      "faithful_units": 186367,
+      "tokens": 111390,
+      "X": 0.597692,
+      "X_inverse": 1.673104
     },
     "hi": {
       "name": "Hindi",
-      "words": 1700,
-      "tokens": 1840,
-      "X": 1.0824,
-      "X_inverse": 0.9239
+      "faithful_units": 88359,
+      "tokens": 51190,
+      "X": 0.579341,
+      "X_inverse": 1.726099
     },
     "te": {
       "name": "Telugu",
-      "words": 1700,
-      "tokens": 1863,
-      "X": 1.0959,
-      "X_inverse": 0.9125
+      "faithful_units": 36292,
+      "tokens": 24428,
+      "X": 0.673096,
+      "X_inverse": 1.485672
     },
-    "ta": {
-      "name": "Tamil",
-      "words": 1700,
-      "tokens": 1830,
-      "X": 1.0765,
-      "X_inverse": 0.929
+    "mai": {
+      "name": "Maithili",
+      "faithful_units": 5808,
+      "tokens": 4258,
+      "X": 0.733127,
+      "X_inverse": 1.364021
     }
   },
   "sorted_ascending": [
     {
-      "lang": "ta",
-      "name": "Tamil",
-      "X": 1.0765
+      "lang": "hi",
+      "name": "Hindi",
+      "X": 0.579341
     },
     {
       "lang": "en",
       "name": "English",
-      "X": 1.0806
-    },
-    {
-      "lang": "hi",
-      "name": "Hindi",
-      "X": 1.0824
+      "X": 0.597692
     },
     {
       "lang": "te",
       "name": "Telugu",
-      "X": 1.0959
+      "X": 0.673096
+    },
+    {
+      "lang": "mai",
+      "name": "Maithili",
+      "X": 0.733127
     }
   ],
   "X_min": {
-    "lang": "ta",
-    "name": "Tamil",
-    "value": 1.0765
+    "lang": "hi",
+    "name": "Hindi",
+    "value": 0.579341
   },
   "X_max": {
-    "lang": "te",
-    "name": "Telugu",
-    "value": 1.0959
+    "lang": "mai",
+    "name": "Maithili",
+    "value": 0.733127
   },
-  "spread": 0.0194,
-  "score": 51546.39,
-  "all_under_1_2": true
+  "spread": 0.153786,
+  "score": 6502.54,
+  "hindi_penalty_factor": 1.0,
+  "hindi_adjusted_score": 6502.56,
+  "all_under_1_2": true,
+  "approach": "hf-bpe-metaspace-weighted"
 }

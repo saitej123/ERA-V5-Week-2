@@ -1,5 +1,8 @@
 __pycache__/
 *.pyc
-# Generated intermediates (inlined into index.html)
-tokenizer.json
+.venv/
+# Generated intermediates (inlined into index.html; keep locally)
+tokenizer.widget.json
 stats.json
+metrics.json
+Actual_Solution/
